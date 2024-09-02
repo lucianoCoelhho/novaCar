@@ -14,7 +14,15 @@ public class Carro {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
-    private String nome;
+    private String placa;
+    private String numeroChassi;
+    private String marca;
+    private String modelo;
+    private String cor;
+    private String categoria;
+    private String descricaoDetalhada;
+    private double valorAluguel;
+
 
     @Temporal(TemporalType.TIMESTAMP)
     private Date dataCriacao;
