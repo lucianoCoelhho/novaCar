@@ -6,28 +6,19 @@ import lombok.Data;
 import java.util.Date;
 
 @Entity
-@Table (name = "carro")
+@Table(name = "categoria")
 @Data
-public class Carro {
+public class Categoria {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
-    private String placa;
-    private String numeroChassi;
-    private String marca;
-    private String modelo;
-    private String cor;
-
-    private String descricaoDetalhada;
-    private double valorAluguel;
-
+    private String tipoCategoria;
 
     @Temporal(TemporalType.TIMESTAMP)
     private Date dataCriacao;
 
     @Temporal(TemporalType.TIMESTAMP)
     private Date dataAtualizacao;
-
 }

@@ -9,22 +9,23 @@ import org.springframework.web.bind.annotation.*;
 import java.util.*;
 
 @RestController
+@RequestMapping("/api/carro")
 @CrossOrigin(origins = "*")
 public class CarroController {
 
     @Autowired
     CarroService carroService;
 
-    @GetMapping("/")
+    @GetMapping
     public List<Carro> buscarTodos(){
         return carroService.buscarTodos();
     }
-    @PostMapping("/")
+    @PostMapping
     public Carro inserir(@RequestBody Carro carro){
         return carroService.inserir(carro);
     }
 
-    @PutMapping("/")
+    @PutMapping
     public Carro alterar(@RequestBody Carro carro){
         return carroService.alterar(carro);
     }
