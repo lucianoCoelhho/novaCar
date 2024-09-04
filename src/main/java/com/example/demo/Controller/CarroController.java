@@ -20,6 +20,7 @@ public class CarroController {
     public List<Carro> buscarTodos(){
         return carroService.buscarTodos();
     }
+
     @PostMapping
     public Carro inserir(@RequestBody Carro carro){
         return carroService.inserir(carro);

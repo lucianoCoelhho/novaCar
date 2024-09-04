@@ -1,32 +1,27 @@
 package com.example.demo.Entity;
 
+import java.util.*;
+
 import jakarta.persistence.*;
 import lombok.Data;
 
-import java.util.Date;
-
 @Entity
-@Table (name = "carro")
+@Table(name = "permissao")
 @Data
-public class Carro {
+public class Permissao {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
-    private String placa;
-    private String numeroChassi;
-    private String marca;
-    private String modelo;
-    private String cor;
-
-    private String descricaoDetalhada;
-    private double valorAluguel;
+    private String nome;
 
     @Temporal(TemporalType.TIMESTAMP)
     private Date dataCriacao;
 
     @Temporal(TemporalType.TIMESTAMP)
     private Date dataAtualizacao;
+
+
 
 }

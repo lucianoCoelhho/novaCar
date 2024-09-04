@@ -1,32 +1,35 @@
 package com.example.demo.Entity;
 
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Data;
 
 import java.util.Date;
 
 @Entity
-@Table (name = "carro")
+@Table(name = "permissao_pessoa")
 @Data
-public class Carro {
+public class PermissaoPessoa {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
-    private String placa;
-    private String numeroChassi;
-    private String marca;
-    private String modelo;
-    private String cor;
+    @ManyToOne
+    @JoinColumn(name = "idPessoa")
+    @JsonIgnore
+    private Pessoa pessoa;
 
-    private String descricaoDetalhada;
-    private double valorAluguel;
+    @ManyToOne
+    @JoinColumn(name = "idPermissao")
+    private Permissao permissao;
 
     @Temporal(TemporalType.TIMESTAMP)
     private Date dataCriacao;
 
     @Temporal(TemporalType.TIMESTAMP)
     private Date dataAtualizacao;
+
 
 }
