@@ -19,6 +19,7 @@ public class Carro {
     private String marca;
     private String modelo;
     private String cor;
+    private String categoria;
 
     private String descricaoDetalhada;
     private double valorAluguel;
@@ -28,5 +29,9 @@ public class Carro {
 
     @Temporal(TemporalType.TIMESTAMP)
     private Date dataAtualizacao;
+
+    @ManyToOne//muitos carros para uma pessoa
+    @JoinColumn(name = "pessoa_id")
+    private Pessoa pessoa;
 
 }

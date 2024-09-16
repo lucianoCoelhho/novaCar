@@ -1,13 +1,11 @@
 package com.example.demo.Dto;
 
-import com.example.demo.Entity.Carro;
 import com.example.demo.Entity.Pessoa;
 import lombok.Data;
 import org.springframework.beans.BeanUtils;
 
 @Data
 public class PessoaDto {
-
 
     private String nome;
     private String cpf;

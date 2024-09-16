@@ -5,7 +5,6 @@ import lombok.Data;
 
 import java.util.*;
 
-
 @Entity
 @Table (name = "pessoa")
 @Data
@@ -17,17 +16,13 @@ public class Pessoa {
 
     private String nome;
     private String cpf;
-    private String email;
-    private String codigoRecuperacaoSenha;
-    @Temporal(TemporalType.TIMESTAMP)
-    private Date dataEnvioCodigo;
     private String senha;
+    private String email;
 
     @Temporal(TemporalType.TIMESTAMP)
     private Date dataCriacao;
 
     @Temporal(TemporalType.TIMESTAMP)
     private Date dataAtualizacao;
-
 
 }
