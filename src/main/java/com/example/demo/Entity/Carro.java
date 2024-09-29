@@ -18,8 +18,10 @@ public class Carro {
     private String numeroChassi;
     private String marca;
     private String modelo;
+    private int ano;
     private String cor;
     private String categoria;
+
 
     private String descricaoDetalhada;
     private double valorAluguel;

@@ -1,6 +1,5 @@
 package com.example.demo.Controller;
 
-
 import com.example.demo.Entity.Pessoa;
 import com.example.demo.Service.PessoaService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/pessoa")
+@RequestMapping("/pessoa")
 @CrossOrigin(origins = "*")
 public class PessoaController {
 
@@ -22,7 +21,7 @@ public class PessoaController {
         return pessoaService.buscarTodos();
     }
 
-    @PostMapping
+    @PostMapping("/")
     public Pessoa inserir(@RequestBody Pessoa pessoa){
         return pessoaService.inserir(pessoa);
     }
